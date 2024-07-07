@@ -33,3 +33,34 @@ public struct LoginResponseDTO: Codable {
         self.userID = userID
     }
 }
+
+/// Data Transfer Object for handling category saving request.
+public struct CategoryRequestDTO: Codable {
+    public let title: String
+    public let colorCode: String
+    
+    init(
+        title: String,
+        colorCode: String
+    ) {
+        self.title = title
+        self.colorCode = colorCode
+    }
+}
+
+/// Data Transfer Object for handling category saving response.
+public struct CategoryResponseDTO: Codable {
+    public let id: UUID
+    public let title: String
+    public let colorCode: String
+    
+    init(
+        id: UUID,
+        title: String,
+        colorCode: String
+    ) {
+        self.id = id
+        self.title = title
+        self.colorCode = colorCode
+    }
+}
