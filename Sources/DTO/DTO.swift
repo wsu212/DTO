@@ -54,7 +54,7 @@ public struct CategoryResponseDTO: Codable {
     public let title: String
     public let colorCode: String
     
-    init(
+    public init(
         id: UUID,
         title: String,
         colorCode: String
