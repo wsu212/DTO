@@ -39,7 +39,7 @@ public struct CategoryRequestDTO: Codable {
     public let title: String
     public let colorCode: String
     
-    init(
+    public init(
         title: String,
         colorCode: String
     ) {
