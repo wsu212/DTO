@@ -64,3 +64,40 @@ public struct CategoryResponseDTO: Codable {
         self.colorCode = colorCode
     }
 }
+
+/// Data Transfer Object for handling item saving request.
+public struct ItemRequestDTO: Codable {
+    public let title: String
+    public let price: Double
+    public let quantity: Int
+    
+    public init(
+        title: String,
+        price: Double,
+        quantity: Int
+    ) {
+        self.title = title
+        self.price = price
+        self.quantity = quantity
+    }
+}
+
+/// Data Transfer Object for handling item saving response.
+public struct ItemResponseDTO: Codable {
+    public let id: UUID
+    public let title: String
+    public let price: Double
+    public let quantity: Int
+    
+    public init(
+        id: UUID,
+        title: String,
+        price: Double,
+        quantity: Int
+    ) {
+        self.id = id
+        self.title = title
+        self.price = price
+        self.quantity = quantity
+    }
+}
