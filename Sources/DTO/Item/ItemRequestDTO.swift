@@ -10,16 +10,16 @@ import Foundation
 /// Data Transfer Object for handling item saving request.
 public struct ItemRequestDTO: Codable {
     public let title: String
-    public let price: Double
     public let quantity: Int
+    public let isChecked: Bool
     
     public init(
         title: String,
-        price: Double,
-        quantity: Int
+        quantity: Int,
+        isChecked: Bool
     ) {
         self.title = title
-        self.price = price
         self.quantity = quantity
+        self.isChecked = isChecked
     }
 }

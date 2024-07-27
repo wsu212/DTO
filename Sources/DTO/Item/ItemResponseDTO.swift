@@ -11,18 +11,18 @@ import Foundation
 public struct ItemResponseDTO: Codable {
     public let id: UUID
     public let title: String
-    public let price: Double
     public let quantity: Int
+    public let isChecked: Bool
     
     public init(
         id: UUID,
         title: String,
-        price: Double,
-        quantity: Int
+        quantity: Int,
+        isChecked: Bool
     ) {
         self.id = id
         self.title = title
-        self.price = price
         self.quantity = quantity
+        self.isChecked = isChecked
     }
 }
