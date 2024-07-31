@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct IngredientDTO: Codable {
+public struct IngredientDTO: Codable, Sendable {
     public let aisle: String
     public let consistency: String
     public let name: String
@@ -17,7 +17,16 @@ public struct IngredientDTO: Codable {
     public let unit: String
     public let meta: [String]
     
-    public init(aisle: String, consistency: String, name: String, original: String, originalName: String, amount: Double, unit: String, meta: [String]) {
+    public init(
+        aisle: String,
+        consistency: String,
+        name: String,
+        original: String,
+        originalName: String,
+        amount: Double,
+        unit: String,
+        meta: [String]
+    ) {
         self.aisle = aisle
         self.consistency = consistency
         self.name = name

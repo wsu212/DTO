@@ -7,7 +7,7 @@
 
 import Foundation
 
-public struct RecipeRequestDTO: Codable {
+public struct RecipeRequestDTO: Codable, Sendable {
     public let title: String
     public let image: String
     public let readyInMinutes: Int
@@ -15,6 +15,7 @@ public struct RecipeRequestDTO: Codable {
     public let sourceUrl: String
     public let summary: String
     public let extendedIngredients: [IngredientDTO]
+    public let analyzedInstructions: [InstructionDTO]
     
     public init(
         title: String,
@@ -23,7 +24,8 @@ public struct RecipeRequestDTO: Codable {
         servings: Int,
         sourceUrl: String,
         summary: String,
-        extendedIngredients: [IngredientDTO]
+        extendedIngredients: [IngredientDTO],
+        analyzedInstructions: [InstructionDTO]
     ) {
         self.title = title
         self.image = image
@@ -32,5 +34,6 @@ public struct RecipeRequestDTO: Codable {
         self.sourceUrl = sourceUrl
         self.summary = summary
         self.extendedIngredients = extendedIngredients
+        self.analyzedInstructions = analyzedInstructions
     }
 }
