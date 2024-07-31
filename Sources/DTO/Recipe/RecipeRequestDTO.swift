@@ -14,6 +14,7 @@ public struct RecipeRequestDTO: Codable {
     public let servings: Int
     public let sourceUrl: String
     public let summary: String
+    public let extendedIngredients: [IngredientDTO]
     
     public init(
         title: String,
@@ -21,7 +22,8 @@ public struct RecipeRequestDTO: Codable {
         readyInMinutes: Int,
         servings: Int,
         sourceUrl: String,
-        summary: String
+        summary: String,
+        extendedIngredients: [IngredientDTO]
     ) {
         self.title = title
         self.image = image
@@ -29,5 +31,6 @@ public struct RecipeRequestDTO: Codable {
         self.servings = servings
         self.sourceUrl = sourceUrl
         self.summary = summary
+        self.extendedIngredients = extendedIngredients
     }
 }
