@@ -20,10 +20,10 @@ public struct InstructionDTO: Codable, Sendable {
 public struct StepDTO: Codable, Sendable {
     public let number: Int
     public let step: String
-    public let ingredients: [Ingredient]
-    public let equipment: [Equipment]
+    public let ingredients: [StepIngredientDTO]
+    public let equipment: [StepEquipmentDTO]
     
-    public init(number: Int, step: String, ingredients: [Ingredient], equipment: [Equipment]) {
+    public init(number: Int, step: String, ingredients: [StepIngredientDTO], equipment: [StepEquipmentDTO]) {
         self.number = number
         self.step = step
         self.ingredients = ingredients
@@ -31,7 +31,7 @@ public struct StepDTO: Codable, Sendable {
     }
 }
 
-public struct Ingredient: Codable, Sendable {
+public struct StepIngredientDTO: Codable, Sendable {
     public let id: Int
     public let name: String
     public let image: String
@@ -43,7 +43,7 @@ public struct Ingredient: Codable, Sendable {
     }
 }
 
-public struct Equipment: Codable, Sendable {
+public struct StepEquipmentDTO: Codable, Sendable {
     public let id: Int
     public let name: String
     public let image: String
