@@ -15,7 +15,7 @@ public struct RecipeResponseDTO: Codable, Sendable {
     public let servings: Int
     public let sourceUrl: String
     public let summary: String
-    public var isFavorite: Bool
+    public let isFavorite: Bool
     public let extendedIngredients: [IngredientDTO]
     public let analyzedInstructions: [InstructionDTO]
     
