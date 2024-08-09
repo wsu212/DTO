@@ -15,6 +15,8 @@ public struct RecipeRequestDTO: Codable, Sendable {
     public let sourceUrl: String
     public let summary: String
     public let isFavorite: Bool
+    public let diets: [String]
+    public let dishTypes: [String]
     public let extendedIngredients: [IngredientDTO]
     public let analyzedInstructions: [InstructionDTO]
     
@@ -26,6 +28,8 @@ public struct RecipeRequestDTO: Codable, Sendable {
         sourceUrl: String,
         summary: String,
         isFavorite: Bool,
+        diets: [String],
+        dishTypes: [String],
         extendedIngredients: [IngredientDTO],
         analyzedInstructions: [InstructionDTO]
     ) {
@@ -36,6 +40,8 @@ public struct RecipeRequestDTO: Codable, Sendable {
         self.sourceUrl = sourceUrl
         self.summary = summary
         self.isFavorite = isFavorite
+        self.diets = diets
+        self.dishTypes = dishTypes
         self.extendedIngredients = extendedIngredients
         self.analyzedInstructions = analyzedInstructions
     }
